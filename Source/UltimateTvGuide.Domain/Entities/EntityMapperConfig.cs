@@ -25,8 +25,8 @@ namespace UltimateTvGuide.Domain.Entities
             return new MapperConfiguration(c =>
             {
                 c.CreateMap<GuideChannelShow, TvShow>()
-                    .ForMember(d => d.StartTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDate(s.StartTime)))
-                    .ForMember(d => d.EndTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDate(s.EndTime)))
+                    .ForMember(d => d.StartTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDateTimeOffset(s.StartTime)))
+                    .ForMember(d => d.EndTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDateTimeOffset(s.EndTime)))
                     .ForMember(d => d.LogoUri, m => m.ResolveUsing(s => !string.IsNullOrEmpty(s.Logo) ? new Uri(s.Logo, UriKind.Absolute) : null));
 
                 c.CreateMap<GuideChannel, TvChannel>()
@@ -41,12 +41,12 @@ namespace UltimateTvGuide.Domain.Entities
             });
         }
 
-        private static DateTimeOffset ParseTimeStringToFutureDate(string timeString)
+        private static DateTimeOffset ParseTimeStringToFutureDateTimeOffset(string timeString)
         {
             DateTimeOffset now = DateTimeOffset.Now;
             TimeSpan timeSpan = TimeSpan.ParseExact(timeString, "g", CultureInfo.InvariantCulture);
-            DateTimeOffset result = new DateTimeOffset(now.Year, now.Month, now.Day, timeSpan.Hours, timeSpan.Minutes, 0, now.Offset);
-            if (timeSpan.Hours < now.Hour || (timeSpan.Hours == now.Hour && timeSpan.Minutes < now.Minute))
+            DateTimeOffset result = new DateTimeOffset(now.Year, now.Month, now.Day, timeSpan.Hours, timeSpan.Minutes, now.Second, now.Offset);
+            if (result < now)
                 result = result.AddDays(1);
             return result;
         }
