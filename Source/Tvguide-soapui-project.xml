@@ -1,5 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.Guide">
+<con:soapui-project id="cc9d6f25-9fad-469e-a5ef-1d5d1c3becd9" activeEnvironment="Default" name="Tvguide" resourceRoot="${projectDir}" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b023eb3c-6c50-42e7-9a9d-79009de51f88" wsaVersion="NONE" name="BasicHttpBinding_ITwoWayAsync" type="wsdl" bindingName="{http://nl.school.ultimatetvguide/}BasicHttpBinding_ITwoWayAsync" soapVersion="1_1" anonymous="optional" definition="tvguide.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\S:\Projects\New%20folder\tvguide.xml"><con:part><con:url>file:\S:\Projects\New%20folder\tvguide.xml</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://nl.school.ultimatetvguide/" name="BizTalkServiceInstance" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://nl.school.ultimatetvguide/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <CreationInfo Created="2017-02-13 10:43:24Z"/>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nl.school.ultimatetvguide/Imports">
+      <xsd:import namespace="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd2"/>
+      <xsd:import namespace="http://nl.school.ultimatetvguide.Schemas.Guide" schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd3"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TvGuide_GetGuide_InputMessage">
+    <wsdl:part name="part" element="q1:GuideRequestIn" xmlns:q1="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn"/>
+  </wsdl:message>
+  <wsdl:message name="TvGuide_GetGuide_OutputMessage">
+    <wsdl:part name="part" element="q2:Guide" xmlns:q2="http://nl.school.ultimatetvguide.Schemas.Guide"/>
+  </wsdl:message>
+  <wsdl:portType name="TvGuide">
+    <wsdl:documentation/>
+    <wsdl:operation name="GetGuide">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:TvGuide_GetGuide_InputMessage"/>
+      <wsdl:output message="tns:TvGuide_GetGuide_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITwoWayAsync" type="tns:TvGuide">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetGuide">
+      <wsdl:documentation/>
+      <soap:operation style="document" soapAction="GetGuide"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BizTalkServiceInstance">
+    <wsdl:port name="BasicHttpBinding_ITwoWayAsync" binding="tns:BasicHttpBinding_ITwoWayAsync">
+      <soap:address location="http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://nl.school.ultimatetvguide/PropertySchema/V1.0.0">
+  <xs:annotation>
+    <xs:appinfo/>
+  </xs:annotation>
+  <xs:element name="GuideRequestIn">
+    <xs:annotation>
+      <xs:appinfo/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="Country" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+  <xs:element name="Guide">
+    <xs:annotation>
+      <xs:appinfo/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Country" type="xs:string"/>
+        <xs:element name="LoadDate" type="xs:string"/>
+        <xs:element maxOccurs="unbounded" name="Channel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChannelId" type="xs:string"/>
+              <xs:element name="ChannelName" type="xs:string"/>
+              <xs:element name="Logo" type="xs:string"/>
+              <xs:element maxOccurs="unbounded" name="Show">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="StartTime" type="xs:string"/>
+                    <xs:element name="EndTime" type="xs:string"/>
+                    <xs:element name="IMDBRating" type="xs:decimal"/>
+                    <xs:element name="Plot" type="xs:string"/>
+                    <xs:element name="Logo" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint></con:endpoints><con:operation id="473fafa4-22c5-48cb-9312-84d60e02be1f" isOneWay="false" action="GetGuide" name="GetGuide" bindingOperationName="GetGuide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8230e985-1a35-429a-867d-8b5ad7de10cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:1234/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nl:GuideRequestIn>\r
+         <Country>nl</Country>\r
+      </nl:GuideRequestIn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1b6ea588-54e9-4416-9996-9a1f291e4bc5" name="BasicHttpBinding_ITwoWayAsync TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2c6cc4f4-c2cd-43f5-9e4b-ae426a0a03e9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetGuide TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="8b608827-6a71-485b-bf84-dcd64bb8dd9d" name="GetGuide"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITwoWayAsync</con:interface><con:operation>GetGuide</con:operation><con:request name="GetGuide" id="3e417cb2-ce5f-4757-bdbf-53bdac8f408b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nl:GuideRequestIn>\r
+         <Country>?</Country>\r
+      </nl:GuideRequestIn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetGuide"/></con:request></con:config></con:testStep><con:loadTest id="c0ef38df-ad60-4e6f-a7c5-feefb529c3f1" name="LoadTest 1"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1558d4d4-6814-41e5-9c49-3d619bb6af20" port="1234" path="/" host="localhost" name="TvguideMockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetGuide" id="bdc97071-6fe4-411f-bf9c-a9881be41b5e" interface="BasicHttpBinding_ITwoWayAsync" operation="GetGuide"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="927d2e8a-d8c4-44cd-84d4-37784791c9a2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.Guide">
    <soapenv:Header/>
    <soapenv:Body>
       <nl:Guide>
@@ -44,4 +147,4 @@
          </Channel>
       </nl:Guide>
    </soapenv:Body>
-</soapenv:Envelope>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
