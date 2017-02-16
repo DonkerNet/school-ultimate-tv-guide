@@ -7,7 +7,6 @@ using UltimateTvGuide.Web.Models;
 namespace UltimateTvGuide.Web.Controllers
 {
     [RoutePrefix("guide")]
-    [Route("{action=Index}")]
     public class GuideController : Controller
     {
         private readonly ITvGuideRepository _tvGuideRepository;
@@ -20,7 +19,8 @@ namespace UltimateTvGuide.Web.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("{country}", Order = 1)]
+        [Route("", Order = 2)]
         public ActionResult Index(string country = null)
         {
             TvGuide tvGuide = _tvGuideRepository.GetByCountry(country);
