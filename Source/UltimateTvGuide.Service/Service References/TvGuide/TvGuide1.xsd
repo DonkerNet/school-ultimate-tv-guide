@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://nl.school.ultimatetvguide/PropertySchema/V1.0.0" targetNamespace="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo />
+  </xs:annotation>
+  <xs:element name="GuideRequestIn">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="Country" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

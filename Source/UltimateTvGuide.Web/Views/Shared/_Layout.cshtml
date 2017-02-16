@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Ultimate TV Guide</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/imagehover.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+
+    @RenderSection("scripts_top", required: false)
+</head>
+<body>
+
+    <!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Ultimate <span>TV Guide</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Index", "Guide", new {country = "nl"})">Nederlands</a></li>
+                    <li><a href="@Url.Action("Index", "Guide", new {country = "en"})">Engels</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Navigation bar-->
+
+    <!--Banner-->
+    <div class="banner">
+        <div class="bg-color">
+            <div class="container">
+                <div class="row">
+                    <div class="banner-text text-center">
+                        <div class="text-border">
+                            <h2 class="text-dec">@ViewBag.Title</h2>
+                        </div>
+                        <div class="intro-para text-center quote">
+                            <p class="big-text">Alle informatie over je favoriete televisie programma's bij de hand</p>
+                            <p class="small-text">De Ultimate TV Guide helpt jou met het vinden van de leukste programma's die je absoluut niet wilt missen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Banner-->
+
+    @RenderBody()
+
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <div class="container text-center">
+            Copyright &copy; <strong>Best IDH15 Group Ever!</strong> 1884-@DateTime.Now.Year
+        </div>
+    </footer>
+    <!--/ Footer-->
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.easing.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    @RenderSection("scripts_bottom", required: false)
+</body>
+</html>

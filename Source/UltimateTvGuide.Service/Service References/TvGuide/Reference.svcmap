@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ea14bcc5-09b2-4b0c-95fb-738004ad51ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TvGuide.xsd" MetadataType="Schema" ID="2cb2d894-8eee-4def-abba-0a4c8a790249" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide_1.xsd" />
+    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="0a2a3d61-e63f-49ce-9a90-226f1cde8162" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?wsdl" />
+    <MetadataFile FileName="TvGuide1.xsd" MetadataType="Schema" ID="987ac08e-021b-42fc-a77e-d66e19afe063" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

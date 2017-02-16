@@ -1,0 +1,65 @@
+﻿@using UltimateTvGuide.Web.Models
+@model GuideIndexViewModel
+@{
+    ViewBag.Title = $"Televisie gids ({Model.Country})";
+}
+<section class="section-padding">
+    @if (Model.HasChannels)
+    {
+        foreach (var channel in Model.Channels)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="header-section text-center">
+                        <h2>@channel.Name</h2>
+                        <hr class="bottom-line">
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Start tijd</th>
+                                <th>Eind tijd</th>
+                                <th>Naam</th>
+                                <th>Beoordeling</th>
+                                <th>Omschrijving</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var show in channel.Shows)
+                            {
+                                <tr>
+                                    <td>@show.StartTime.ToString("hh:mm")</td>
+                                    <td>@show.EndTime.ToString("hh:mm")</td>
+                                    <td>@show.Name</td>
+                                    <td>
+                                        @if (show.ImdbRating > 0F)
+                                        {
+                                            @show.ImdbRating.ToString("0.0")
+                                        }
+                                        else
+                                        {
+                                            @:Onbekend
+                                        }
+                                    </td>
+                                    <td>@show.Plot</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="container">
+            <div class="row">
+                <div class="header-section text-center">
+                    <h2>Geen zenders gevonden.</h2>
+                </div>
+            </div>
+        </div>
+    }
+</section>

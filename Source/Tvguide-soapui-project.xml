@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.Guide">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nl:Guide>
+         <Country>NL</Country>
+         <LoadDate>01-01-2017</LoadDate>
+         <!--1 or more repetitions:-->
+         <Channel>
+            <ChannelId>1</ChannelId>
+            <ChannelName>NPO1</ChannelName>
+            <Logo>http://test.com/logo.jpg</Logo>
+            <!--1 or more repetitions:-->
+            <Show>
+               <Name>Nieuws</Name>
+               <StartTime>20:00</StartTime>
+               <EndTime>20:30</EndTime>
+               <IMDBRating>1.0</IMDBRating>
+               <Plot>NPO geeft tegenwoordig alleen propoganda</Plot>
+               <Logo>http://test.com/logo.jpg</Logo>
+            </Show>
+            <Show>
+               <Name>Sesamstraat</Name>
+               <StartTime>20:30</StartTime>
+               <EndTime>21:30</EndTime>
+               <IMDBRating>5.0</IMDBRating>
+               <Plot>Sesamstraat rules</Plot>
+               <Logo>http://test.com/logo.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>2</ChannelId>
+            <ChannelName>NPO2</ChannelName>
+            <Logo>http://test.com/logo.jpg</Logo>
+            <!--1 or more repetitions:-->
+            <Show>
+               <Name>Nieuws</Name>
+               <StartTime>20:00</StartTime>
+               <EndTime>20:30</EndTime>
+               <IMDBRating>1.0</IMDBRating>
+               <Plot>NPO geeft tegenwoordig alleen propoganda</Plot>
+               <Logo>http://test.com/logo.jpg</Logo>
+            </Show>
+         </Channel>
+      </nl:Guide>
+   </soapenv:Body>
+</soapenv:Envelope>
