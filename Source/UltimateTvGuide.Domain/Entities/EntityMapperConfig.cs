@@ -27,6 +27,7 @@ namespace UltimateTvGuide.Domain.Entities
                 c.CreateMap<GuideChannelShow, TvShow>()
                     .ForMember(d => d.StartTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDateTimeOffset(s.StartTime)))
                     .ForMember(d => d.EndTime, m => m.ResolveUsing(s => ParseTimeStringToFutureDateTimeOffset(s.EndTime)))
+                    .ForMember(d => d.ImdbRating, m => m.ResolveUsing(s => float.Parse(s.IMDBRating, NumberFormatInfo.InvariantInfo)))
                     .ForMember(d => d.LogoUri, m => m.ResolveUsing(s => !string.IsNullOrEmpty(s.Logo) ? new Uri(s.Logo, UriKind.Absolute) : null));
 
                 c.CreateMap<GuideChannel, TvChannel>()

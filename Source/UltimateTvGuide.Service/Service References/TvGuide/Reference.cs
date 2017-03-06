@@ -204,7 +204,7 @@ namespace UltimateTvGuide.Service.TvGuide {
         
         private string endTimeField;
         
-        private decimal iMDBRatingField;
+        private string iMDBRatingField;
         
         private string plotField;
         
@@ -248,7 +248,7 @@ namespace UltimateTvGuide.Service.TvGuide {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public decimal IMDBRating {
+        public string IMDBRating {
             get {
                 return this.iMDBRatingField;
             }

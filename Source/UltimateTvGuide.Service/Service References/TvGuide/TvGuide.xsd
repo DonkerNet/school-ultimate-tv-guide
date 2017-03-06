@@ -2,7 +2,9 @@
 <xs:schema xmlns="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Guide">
     <xs:annotation>
-      <xs:appinfo />
+      <xs:appinfo>
+        <b:recordInfo rootTypeName="Guide" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" />
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
@@ -20,7 +22,7 @@
                     <xs:element name="Name" type="xs:string" />
                     <xs:element name="StartTime" type="xs:string" />
                     <xs:element name="EndTime" type="xs:string" />
-                    <xs:element name="IMDBRating" type="xs:decimal" />
+                    <xs:element name="IMDBRating" type="xs:string" />
                     <xs:element name="Plot" type="xs:string" />
                     <xs:element name="Logo" type="xs:string" />
                   </xs:sequence>

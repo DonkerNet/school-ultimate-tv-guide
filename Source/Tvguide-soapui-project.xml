@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="cc9d6f25-9fad-469e-a5ef-1d5d1c3becd9" activeEnvironment="Default" name="Tvguide" resourceRoot="${projectDir}" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b023eb3c-6c50-42e7-9a9d-79009de51f88" wsaVersion="NONE" name="BasicHttpBinding_ITwoWayAsync" type="wsdl" bindingName="{http://nl.school.ultimatetvguide/}BasicHttpBinding_ITwoWayAsync" soapVersion="1_1" anonymous="optional" definition="tvguide.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\S:\Projects\New%20folder\tvguide.xml"><con:part><con:url>file:\S:\Projects\New%20folder\tvguide.xml</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://nl.school.ultimatetvguide/" name="BizTalkServiceInstance" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://nl.school.ultimatetvguide/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<con:soapui-project id="cc9d6f25-9fad-469e-a5ef-1d5d1c3becd9" activeEnvironment="Default" name="Tvguide" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b023eb3c-6c50-42e7-9a9d-79009de51f88" wsaVersion="NONE" name="BasicHttpBinding_ITwoWayAsync" type="wsdl" bindingName="{http://nl.school.ultimatetvguide/}BasicHttpBinding_ITwoWayAsync" soapVersion="1_1" anonymous="optional" definition="http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc?wsdl"><con:part><con:url>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="BizTalkServiceInstance" targetNamespace="http://nl.school.ultimatetvguide/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://nl.school.ultimatetvguide/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsdl:documentation>
-    <CreationInfo Created="2017-02-13 10:43:24Z"/>
+    <CreationInfo Created="2017-03-06 16:37:40Z"/>
   </wsdl:documentation>
   <wsdl:types>
     <xsd:schema targetNamespace="http://nl.school.ultimatetvguide/Imports">
-      <xsd:import namespace="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn" schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd2"/>
-      <xsd:import namespace="http://nl.school.ultimatetvguide.Schemas.Guide" schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd3"/>
+      <xsd:import schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd2" namespace="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn"/>
+      <xsd:import schemaLocation="http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd3" namespace="http://nl.school.ultimatetvguide.Schemas.Guide"/>
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="TvGuide_GetGuide_InputMessage">
@@ -27,7 +27,7 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="GetGuide">
       <wsdl:documentation/>
-      <soap:operation style="document" soapAction="GetGuide"/>
+      <soap:operation soapAction="GetGuide" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -58,7 +58,9 @@
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://bredict22826dv1:80/ultimateTvGuideService/TvGuide.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.school.ultimatetvguide.Schemas.Guide" xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
   <xs:element name="Guide">
     <xs:annotation>
-      <xs:appinfo/>
+      <xs:appinfo>
+        <b:recordInfo rootTypeName="Guide"/>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
@@ -76,7 +78,7 @@
                     <xs:element name="Name" type="xs:string"/>
                     <xs:element name="StartTime" type="xs:string"/>
                     <xs:element name="EndTime" type="xs:string"/>
-                    <xs:element name="IMDBRating" type="xs:decimal"/>
+                    <xs:element name="IMDBRating" type="xs:string"/>
                     <xs:element name="Plot" type="xs:string"/>
                     <xs:element name="Logo" type="xs:string"/>
                   </xs:sequence>
@@ -88,7 +90,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint></con:endpoints><con:operation id="473fafa4-22c5-48cb-9312-84d60e02be1f" isOneWay="false" action="GetGuide" name="GetGuide" bindingOperationName="GetGuide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8230e985-1a35-429a-867d-8b5ad7de10cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:1234/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint></con:endpoints><con:operation id="473fafa4-22c5-48cb-9312-84d60e02be1f" isOneWay="false" action="GetGuide" name="GetGuide" bindingOperationName="GetGuide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8230e985-1a35-429a-867d-8b5ad7de10cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <nl:GuideRequestIn>\r
@@ -147,4 +149,4 @@
          </Channel>
       </nl:Guide>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
