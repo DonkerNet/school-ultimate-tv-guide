@@ -1,7 +1,7 @@
 ﻿@using UltimateTvGuide.Web.Models
 @model GuideIndexViewModel
 @{
-    ViewBag.Title = $"Televisie gids ({Model.Country})";
+    ViewBag.Title = $"Televisie gids - {Model.Country}";
 }
 <section class="section-padding">
     @if (Model.HasChannels)
@@ -34,9 +34,9 @@
                                     <td>@show.EndTime.ToString("hh:mm")</td>
                                     <td>@show.Name</td>
                                     <td>
-                                        @if (show.ImdbRating > 0F)
+                                        @if (show.ImdbRating > 0)
                                         {
-                                            @show.ImdbRating.ToString("0.0")
+                                            @($"{show.ImdbRating}/10")
                                         }
                                         else
                                         {

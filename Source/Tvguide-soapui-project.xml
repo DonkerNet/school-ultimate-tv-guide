@@ -90,11 +90,11 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint></con:endpoints><con:operation id="473fafa4-22c5-48cb-9312-84d60e02be1f" isOneWay="false" action="GetGuide" name="GetGuide" bindingOperationName="GetGuide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8230e985-1a35-429a-867d-8b5ad7de10cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint></con:endpoints><con:operation id="473fafa4-22c5-48cb-9312-84d60e02be1f" isOneWay="false" action="GetGuide" name="GetGuide" bindingOperationName="GetGuide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8230e985-1a35-429a-867d-8b5ad7de10cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://bredict22826dv1:4321/ultimateTvGuideService/TvGuide.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <nl:GuideRequestIn>\r
-         <Country>nl</Country>\r
+         <Country>us</Country>\r
       </nl:GuideRequestIn>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1b6ea588-54e9-4416-9996-9a1f291e4bc5" name="BasicHttpBinding_ITwoWayAsync TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2c6cc4f4-c2cd-43f5-9e4b-ae426a0a03e9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetGuide TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="8b608827-6a71-485b-bf84-dcd64bb8dd9d" name="GetGuide"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITwoWayAsync</con:interface><con:operation>GetGuide</con:operation><con:request name="GetGuide" id="3e417cb2-ce5f-4757-bdbf-53bdac8f408b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://bredict22826dv1/ultimateTvGuideService/TvGuide.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.GuideRequestIn">\r
@@ -104,49 +104,2130 @@
          <Country>?</Country>\r
       </nl:GuideRequestIn>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetGuide"/></con:request></con:config></con:testStep><con:loadTest id="c0ef38df-ad60-4e6f-a7c5-feefb529c3f1" name="LoadTest 1"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1558d4d4-6814-41e5-9c49-3d619bb6af20" port="1234" path="/" host="localhost" name="TvguideMockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetGuide" id="bdc97071-6fe4-411f-bf9c-a9881be41b5e" interface="BasicHttpBinding_ITwoWayAsync" operation="GetGuide"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="927d2e8a-d8c4-44cd-84d4-37784791c9a2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nl="http://nl.school.ultimatetvguide.Schemas.Guide">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <nl:Guide>
-         <Country>NL</Country>
-         <LoadDate>01-01-2017</LoadDate>
-         <!--1 or more repetitions:-->
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetGuide"/></con:request></con:config></con:testStep><con:loadTest id="c0ef38df-ad60-4e6f-a7c5-feefb529c3f1" name="LoadTest 1"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1558d4d4-6814-41e5-9c49-3d619bb6af20" port="4321" path="/" host="localhost" name="TvguideMockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetGuide" id="bdc97071-6fe4-411f-bf9c-a9881be41b5e" interface="BasicHttpBinding_ITwoWayAsync" operation="GetGuide"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="927d2e8a-d8c4-44cd-84d4-37784791c9a2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <ns0:Guide xmlns:ns0="http://nl.school.ultimatetvguide.Schemas.Guide">
+         <Country>United States</Country>
+         <LoadDate>2017-03-06T21:00:11</LoadDate>
          <Channel>
-            <ChannelId>1</ChannelId>
-            <ChannelName>NPO1</ChannelName>
-            <Logo>http://test.com/logo.jpg</Logo>
-            <!--1 or more repetitions:-->
+            <ChannelId>1083102</ChannelId>
+            <ChannelName>Disney Channel</ChannelName>
+            <Logo>Disney Channel</Logo>
             <Show>
-               <Name>Nieuws</Name>
-               <StartTime>20:00</StartTime>
-               <EndTime>20:30</EndTime>
-               <IMDBRating>1.0</IMDBRating>
-               <Plot>NPO geeft tegenwoordig alleen propoganda</Plot>
-               <Logo>http://test.com/logo.jpg</Logo>
-            </Show>
-            <Show>
-               <Name>Sesamstraat</Name>
-               <StartTime>20:30</StartTime>
-               <EndTime>21:30</EndTime>
-               <IMDBRating>5.0</IMDBRating>
-               <Plot>Sesamstraat rules</Plot>
-               <Logo>http://test.com/logo.jpg</Logo>
+               <Name>Milo Murphy's Law</Name>
+               <StartTime>2017-03-06T07:00:00</StartTime>
+               <EndTime>2017-03-06T07:30:00</EndTime>
+               <IMDBRating>9/10</IMDBRating>
+               <Plot>An animated comedy adventure series that follows 13-year-old Milo Murphy, the fictional great-great-great-great grandson of the Murphy's Law namesake. Milo is the personification of Murphy's Law, where anything that can go wrong, will go wrong; but he is prepared for every possibility, armed with knowledge, a backpack full of supplies and his fearless friends, Melissa and Zack. Together, with an endless sense of optimism and enthusiasm, the trio turn any catastrophe into an adventure.                Written byDisney PR</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/73/184748.jpg</Logo>
             </Show>
          </Channel>
          <Channel>
-            <ChannelId>2</ChannelId>
-            <ChannelName>NPO2</ChannelName>
-            <Logo>http://test.com/logo.jpg</Logo>
-            <!--1 or more repetitions:-->
+            <ChannelId>1079629</ChannelId>
+            <ChannelName>PBS</ChannelName>
+            <Logo>PBS</Logo>
             <Show>
-               <Name>Nieuws</Name>
-               <StartTime>20:00</StartTime>
-               <EndTime>20:30</EndTime>
-               <IMDBRating>1.0</IMDBRating>
-               <Plot>NPO geeft tegenwoordig alleen propoganda</Plot>
-               <Logo>http://test.com/logo.jpg</Logo>
+               <Name>Democracy Now!</Name>
+               <StartTime>2017-03-06T08:00:00</StartTime>
+               <EndTime>2017-03-06T09:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/45/114783.jpg</Logo>
             </Show>
          </Channel>
-      </nl:Guide>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+         <Channel>
+            <ChannelId>1084539</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Live! with Kelly</Name>
+               <StartTime>2017-03-06T09:00:00</StartTime>
+               <EndTime>2017-03-06T10:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/53/134267.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1088215</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>Let's Make a Deal</Name>
+               <StartTime>2017-03-06T10:00:00</StartTime>
+               <EndTime>2017-03-06T11:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/54/137327.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1088220</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>The Price is Right</Name>
+               <StartTime>2017-03-06T11:00:00</StartTime>
+               <EndTime>2017-03-06T12:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>"Come on down!" "The Price Is Right" -- hosted by Bob Barker until 2007 and Drew Carey thereafter -- features a wide variety of games and contests with the same basic challenge: Guess the prices of everyday (or not-quite-everyday) retail items. Four contestants, all of whom are seated in one of the wildest audiences in daytime game-show history, are called to the stage to play a preliminary pricing round. That winner joins the host on stage for one of more than 70 different pricing games. After three such games, the contestants spin a big wheel -- hoping to get as close to $1 as possible -- in the "Showcase Showdown." The two highest winners of that round advance to the final, where prizes could be cars or roomsful of furniture. A trio of models presents the prizes.                Written byJwelch5742</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/25/62998.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1087392</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Animal Rescue</Name>
+               <StartTime>2017-03-06T03:00:00</StartTime>
+               <EndTime>2017-03-06T04:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Based on the same format as "Emergency Call," this syndicated show, hosted by animal lover Alex Paen, featured actual footage and re-enactments of police, firemen, veterinarians, and other rescue workers risking their lives to save trapped, hurt or endangered animals from all over America and around the world.                Written byJean-Marc Rocher &amp;lt;rocher@fiberbit.net&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/52/132327.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1089921</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>The Young and the Restless</Name>
+               <StartTime>2017-03-06T12:30:00</StartTime>
+               <EndTime>2017-03-06T13:30:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Set in Genoa City, Wisconsin, The Young And The Restless is the thirty-year-old soap that centres on the saga between two wealthy families (the Newmans and the Abbotts) in the cosmetics industry. Head of the Newman clan is Victor Newman, the arrogant, cavorting billionaire and his wife Nikki; and running the Abbott show is Jack Abbott, the irresponsible, playboy CEO and his sister Ashley. Most of the show is centred on the competition between the two companies: Victor's Newman Enterprises and the Abbotts' Jabot.                Written byJosh</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/20/51462.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090747</ChannelId>
+            <ChannelName>NBC</ChannelName>
+            <Logo>NBC</Logo>
+            <Show>
+               <Name>Days of Our Lives</Name>
+               <StartTime>2017-03-06T13:00:00</StartTime>
+               <EndTime>2017-03-06T14:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>"Like sands through the hourglass... so are the Days of Our Lives." These words, spoken by late cast member Macdonald Carey, open every episode of this daytime drama, chronicaling the trials and tribulations of the citizens of the fictional city of Salem.                Written byKevin Ackley &amp;lt;kackley1@aol.com&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/87/218576.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1073043</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>The Bold and the Beautiful</Name>
+               <StartTime>2017-03-06T13:30:00</StartTime>
+               <EndTime>2017-03-06T14:00:00</EndTime>
+               <IMDBRating>9/10</IMDBRating>
+               <Plot>The saga of the rich Forresters and the poor Logans is told against the backdrop of the fashion world in Los Angeles. Forrester Creations is the premiere fashion house in the city, thanks to the designing brilliance of Eric Forrester and the money and social grace of his wife, Stephanie Forrester. The ups and downs of their on-again, off-again marriage parallel the stormy lives of all their children, who have shared lovers and spouses with one another and even with their own father. Ridge Forrester is the arrogant oldest son (whose paternity will eventually be called into question); Thorne, the oft-neglected younger son; Kristen, the sweet but sexually-frigid older daughter; Felicia, the wild child. At the center of many of these storms is the Logan family. Beth Logan, the matriarch, has always carried a torch for Eric. Her three daughters include Brooke, the willful and sexually promiscuous oldest; Donna, the ditsy model; and Katie, who has always felt overshadowed by her more ...                Written byJ. Spurlin</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/6/15628.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082137</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>America's News Headquarters</Name>
+               <StartTime>2017-03-06T14:00:00</StartTime>
+               <EndTime>2017-03-06T15:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80882.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083546</ChannelId>
+            <ChannelName>CBS Sports Network</ChannelName>
+            <Logo>CBS Sports Network</Logo>
+            <Show>
+               <Name>The Doug Gottlieb Show</Name>
+               <StartTime>2017-03-06T15:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/25/62897.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1087266</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>The Ellen DeGeneres Show</Name>
+               <StartTime>2017-03-06T15:00:00</StartTime>
+               <EndTime>2017-03-06T16:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>A mix of celebrity interviews, musical performers, audience participation games, and segments spotlighting real people with extraordinary stories and talents, hosted by comedienne Ellen DeGeneres.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/11/29904.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1088642</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Dr. Phil</Name>
+               <StartTime>2017-03-06T15:00:00</StartTime>
+               <EndTime>2017-03-06T16:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Dr. Phillip C. McGraw's show draws on his 25 years of experience in psychology, sociology and observation. Beginning his TV career as the resident expert on human behavior on Oprah Winfrey's daily talk show, Dr. Phil continues to deal with real issues in his blunt style.                Written byAnonymous</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/23/58821.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079002</ChannelId>
+            <ChannelName>ESPN2</ChannelName>
+            <Logo>ESPN2</Logo>
+            <Show>
+               <Name>NFL Live</Name>
+               <StartTime>2017-03-06T15:30:00</StartTime>
+               <EndTime>2017-03-06T16:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/27/69944.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083145</ChannelId>
+            <ChannelName>ESPNEWS</ChannelName>
+            <Logo>ESPNEWS</Logo>
+            <Show>
+               <Name>First Take</Name>
+               <StartTime>2017-03-06T16:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/82/205434.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1088637</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>The Doctors</Name>
+               <StartTime>2017-03-06T16:00:00</StartTime>
+               <EndTime>2017-03-06T17:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>A team of medical professionals discuss a range of various health-related topics and answer questions from viewers who are too embarrassed to ask their own doctors.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/69/174507.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1059402</ChannelId>
+            <ChannelName>Bloomberg TV</ChannelName>
+            <Logo>Bloomberg TV</Logo>
+            <Show>
+               <Name>Bloomberg Technology</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/79/198192.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1064990</ChannelId>
+            <ChannelName>CNBC</ChannelName>
+            <Logo>CNBC</Logo>
+            <Show>
+               <Name>Fast Money</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80099.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083017</ChannelId>
+            <ChannelName>Univision</ChannelName>
+            <Logo>Univision</Logo>
+            <Show>
+               <Name>Primer Impacto</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/30/76685.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083062</ChannelId>
+            <ChannelName>CNN</ChannelName>
+            <Logo>CNN</Logo>
+            <Show>
+               <Name>The Situation Room with Wolf Blitzer</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80208.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083124</ChannelId>
+            <ChannelName>ESPN</ChannelName>
+            <Logo>ESPN</Logo>
+            <Show>
+               <Name>Around the Horn</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T17:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Tony Reali hosts a fun, irreverent half hour of discussion and debate on sports-related topics. Reali chooses the topics and gives each of the panelists, sports writers from major newspapers, a chance to share their opinion, giving them points based on point-of-view, style, and information. He also has a mute button for each participant which he uses to penalize and direct traffic. At the end of each round, the contestant with the lowest score is eliminated until only one remains.                Written bySamuel Williams</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/45/113352.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083149</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>The Five</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80197.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083187</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>MTP Daily</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81692.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083237</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>Premier League Goal Zone</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T17:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/31/78972.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083243</ChannelId>
+            <ChannelName>Outdoor Channel</ChannelName>
+            <Logo>Outdoor Channel</Logo>
+            <Show>
+               <Name>Crush with Lee &amp; Tiffany</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T17:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80920.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090589</ChannelId>
+            <ChannelName>Cartoon Network</ChannelName>
+            <Logo>Cartoon Network</Logo>
+            <Show>
+               <Name>The Amazing World of Gumball</Name>
+               <StartTime>2017-03-06T17:00:00</StartTime>
+               <EndTime>2017-03-06T17:15:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Welcome to Elmore! This quaint little suburb isn't quite what it seems, as in Elmore, just about everything has the ability to come to life! The Amazing World of Gumball follows the misadventures of Gumball, a twelve-year-old cat. With the help of his best friend Darwin, his former pet goldfish that grew legs and joined the family, he gets into all sorts of antics. He is joined by his sister, Anais, a four-year-old bunny with heightened intelligence. His father, Richard, and his mother, Nicole, are there to provide him support as well.                Written byJuan Carlos Morales</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/17/43096.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083238</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>The Men in Blazers Show</Name>
+               <StartTime>2017-03-06T17:30:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/72/181994.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079058</ChannelId>
+            <ChannelName>Cartoon Network</ChannelName>
+            <Logo>Cartoon Network</Logo>
+            <Show>
+               <Name>Cloudy with a Chance of Meatballs</Name>
+               <StartTime>2017-03-06T17:45:00</StartTime>
+               <EndTime>2017-03-06T18:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>The food island will over load and is going to swallow the world. The characters will have to find a way for them to take the island and shoot it in to space and let it create their own planet.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/98/245431.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1059667</ChannelId>
+            <ChannelName>TBN</ChannelName>
+            <Logo>TBN</Logo>
+            <Show>
+               <Name>John Gray World</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T18:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/241143.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1065009</ChannelId>
+            <ChannelName>CNBC</ChannelName>
+            <Logo>CNBC</Logo>
+            <Show>
+               <Name>Mad Money</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Learn how to analyse stocks and the market life like a pro.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80218.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081503</ChannelId>
+            <ChannelName>Golf Channel</ChannelName>
+            <Logo>Golf Channel</Logo>
+            <Show>
+               <Name>Golf Central</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/42/106657.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083038</ChannelId>
+            <ChannelName>Univision</ChannelName>
+            <Logo>Univision</Logo>
+            <Show>
+               <Name>Hotel Todo Incluido</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T18:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/60/150527.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083139</ChannelId>
+            <ChannelName>ESPNEWS</ChannelName>
+            <Logo>ESPNEWS</Logo>
+            <Show>
+               <Name>ESPN FC</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T18:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/23/59749.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083169</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>Special Report with Bret Baier</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80200.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083207</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>For the Record with Greta</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/93/234423.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083239</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>NASCAR America</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/27/69510.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083245</ChannelId>
+            <ChannelName>The Weather Channel</ChannelName>
+            <Logo>The Weather Channel</Logo>
+            <Show>
+               <Name>Weather Underground</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/26/66885.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1089880</ChannelId>
+            <ChannelName>Cartoon Network</ChannelName>
+            <Logo>Cartoon Network</Logo>
+            <Show>
+               <Name>Cloudy with a Chance of Meatballs</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T18:15:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>The food island will over load and is going to swallow the world. The characters will have to find a way for them to take the island and shoot it in to space and let it create their own planet.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/98/245431.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1092336</ChannelId>
+            <ChannelName>CBS Sports Network</ChannelName>
+            <Logo>CBS Sports Network</Logo>
+            <Show>
+               <Name>Drive to NCAA March Madness</Name>
+               <StartTime>2017-03-06T18:00:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/101/252599.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1089885</ChannelId>
+            <ChannelName>Cartoon Network</ChannelName>
+            <Logo>Cartoon Network</Logo>
+            <Show>
+               <Name>Cloudy with a Chance of Meatballs</Name>
+               <StartTime>2017-03-06T18:15:00</StartTime>
+               <EndTime>2017-03-06T18:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>The food island will over load and is going to swallow the world. The characters will have to find a way for them to take the island and shoot it in to space and let it create their own planet.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/98/245431.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1061067</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>CBS Evening News with Scott Pelley</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83935.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1061628</ChannelId>
+            <ChannelName>NBC</ChannelName>
+            <Logo>NBC</Logo>
+            <Show>
+               <Name>NBC Nightly News</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>8/10</IMDBRating>
+               <Plot>This is the flagship nightly news program on NBC.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83406.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081663</ChannelId>
+            <ChannelName>ABC</ChannelName>
+            <Logo>ABC</Logo>
+            <Show>
+               <Name>ABC World News Tonight with David Muir</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>7/10</IMDBRating>
+               <Plot>From the 60's to the 90's, the three major networks were, for the most part, the only source for national and international news. ABC News, anchored by Peter Jennings, regularly presented viewers with both news briefs and in-depth coverage of top events, ranging from human interest stories to the numerous crises that occurred around the world.                Written byJean-Marc Rocher &amp;lt;rocher@fiberbit.net&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83939.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082240</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>NHL Live</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/82200.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083133</ChannelId>
+            <ChannelName>ESPN2</ChannelName>
+            <Logo>ESPN2</Logo>
+            <Show>
+               <Name>Pardon the Interruption</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Two former sportswriters discuss the day's top stories of the sports world.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/75/189360.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083244</ChannelId>
+            <ChannelName>Outdoor Channel</ChannelName>
+            <Logo>Outdoor Channel</Logo>
+            <Show>
+               <Name>Commander Life</Name>
+               <StartTime>2017-03-06T18:30:00</StartTime>
+               <EndTime>2017-03-06T19:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/241141.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1060800</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>The First 100 Days</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/241398.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1065311</ChannelId>
+            <ChannelName>Golf Channel</ChannelName>
+            <Logo>Golf Channel</Logo>
+            <Show>
+               <Name>The Golf Fix</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Top 50 golf instructor Michael Breed turns the game of golf on its head with modern, fun and in your face instruction. With live call-ins, e-mail from viewers, and high profile golf guests, this is an instructional show like no other.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83857.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1067196</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Wheel of Fortune</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T19:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Contestants guess hidden phrases by guessing letters one at a time. Contestants win money or prizes, as determined by a spin of the wheel, for each correct consonant they guess. But they have to pay to see what vowels are in a puzzle. The contestant that has amassed the most winnings at the end of a game goes on to play the bonus round, in which the player can win even more -- prizes frequently seen in the bonus round include automobiles, vacations and more cash.                Written byJwelch5742</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/12/30416.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081034</ChannelId>
+            <ChannelName>Bloomberg TV</ChannelName>
+            <Logo>Bloomberg TV</Logo>
+            <Show>
+               <Name>Bloomberg Daybreak Asia</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/84/210565.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082997</ChannelId>
+            <ChannelName>Telemundo</ChannelName>
+            <Logo>Telemundo</Logo>
+            <Show>
+               <Name>Caso Cerrado: Edicion Estelar</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/29/74520.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083082</ChannelId>
+            <ChannelName>CNN</ChannelName>
+            <Logo>CNN</Logo>
+            <Show>
+               <Name>Erin Burnett OutFront</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80206.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083106</ChannelId>
+            <ChannelName>E!</ChannelName>
+            <Logo>E!</Logo>
+            <Show>
+               <Name>E! News</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/84016.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083227</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>Hardball with Chris Matthews</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Starting on CNBC in 1997 and changing to MSNBC in 1999, Chris Matthews asks the tough questions in gut-renching political and social debates with celebrity and non-celebrity guests.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81698.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1085213</ChannelId>
+            <ChannelName>NFL Network</ChannelName>
+            <Logo>NFL Network</Logo>
+            <Show>
+               <Name>NFL Total Access</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/27/68872.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1091114</ChannelId>
+            <ChannelName>Nick Jr.</ChannelName>
+            <Logo>Nick Jr.</Logo>
+            <Show>
+               <Name>Dino Dan</Name>
+               <StartTime>2017-03-06T19:00:00</StartTime>
+               <EndTime>2017-03-06T19:30:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>A 10 year old boy named Dan Henderson is a boy who is a really big fan of dinosaurs. He loves dinosaurs so much he can actually see them in real life but no one else can. Join Dan as he goes on marvelous adventures in the world of dinosaurs coming to his city.                Written byMekhi Jones</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/82640.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1050677</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Jeopardy!</Name>
+               <StartTime>2017-03-06T19:30:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>On the heels of the syndicated success of "Wheel of Fortune (1983)", producer Merv Griffin decided to return his classic quiz show-with-a-twist, "Jeopardy!" to the airwaves in 1984. It, too, was a huge success, and also marked a return to the game's tried-and-true formula of answers and questions (after a slightly-modified remake six years earlier failed to catch on). Three contestants, including a returning champion, competed. Six categories are announced (e.g., Art World, Cooking, 20th Century Republicans, "Friends (1994)", Muscle Men and College Girls Wearing White T-shirts), each having five answers ostensibly graded by difficulty, from $100 to $500. The champion chose a category and dollar amount (e.g., "College Girls Wearing White T-shirts for $100"), to which host Trebek reads the answer ("Inspector 12 must give her seal of approval before a college girl can wear one of these plain white T-shirts"). Contestants had to respond in question form ("What is Hanes?") ; if correct, ...                Written byBrian Rathjen &amp;lt;briguy_52732@yahoo.com&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/12/30370.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083179</ChannelId>
+            <ChannelName>HBO</ChannelName>
+            <Logo>HBO</Logo>
+            <Show>
+               <Name>Vice News Tonight</Name>
+               <StartTime>2017-03-06T19:30:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/78/196167.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1091115</ChannelId>
+            <ChannelName>Nick Jr.</ChannelName>
+            <Logo>Nick Jr.</Logo>
+            <Show>
+               <Name>Dino Dan</Name>
+               <StartTime>2017-03-06T19:30:00</StartTime>
+               <EndTime>2017-03-06T20:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>A 10 year old boy named Dan Henderson is a boy who is a really big fan of dinosaurs. He loves dinosaurs so much he can actually see them in real life but no one else can. Join Dan as he goes on marvelous adventures in the world of dinosaurs coming to his city.                Written byMekhi Jones</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/82640.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1009090</ChannelId>
+            <ChannelName>Food Network</ChannelName>
+            <Logo>Food Network</Logo>
+            <Show>
+               <Name>Kids Baking Championship</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>The best 10 to 13-year-old bakers compete against each other for the title of Kids Baking Champion.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/88/220914.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1030656</ChannelId>
+            <ChannelName>FreeForm</ChannelName>
+            <Logo>FreeForm</Logo>
+            <Show>
+               <Name>Shadowhunters: The Mortal Instruments</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Clary Fray is a normal teenager living in Brooklyn with her mother. One day, she discovers that she is descended from a line of Shadowhunters; humans born with angelic blood that fight to protect our world from demons. After her mother is kidnapped, Clary must team up with three Shadowhunters: Jace, Alec and Isabelle and her best friend Simon on a quest to find her mother and recover her past.                Written byEmma Wolfe</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/88/220942.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1031894</ChannelId>
+            <ChannelName>USA Network</ChannelName>
+            <Logo>USA Network</Logo>
+            <Show>
+               <Name>WWE Monday Night RAW</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T23:05:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>This wrestling show quickly grew into one of the most popular sports/entertainment shows ever. In addition to presenting matches between the stars of the WWF, this program spent most of its time on the elaborate backstage story that had developed, involving feuds, deals, backstabbings and romances between the wrestlers, managers, referees and commissioners.                Written byJean-Marc Rocher &amp;lt;rocher@fiberbit.net&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/6/15612.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1039348</ChannelId>
+            <ChannelName>FOX</ChannelName>
+            <Logo>FOX</Logo>
+            <Show>
+               <Name>24: Legacy</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>4/10</IMDBRating>
+               <Plot>"According to Fox, the project will center on a military hero who encounters a troubled return to the U.S., compelling him to ask CTU for help in saving his life, and stopping what potentially could be one of the largest-scale terror attacks on American soil."</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/225030.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1057684</ChannelId>
+            <ChannelName>Discovery Channel</ChannelName>
+            <Logo>Discovery Channel</Logo>
+            <Show>
+               <Name>Fast N' Loud: Revved Up</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/36/91817.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1075676</ChannelId>
+            <ChannelName>The CW</ChannelName>
+            <Logo>The CW</Logo>
+            <Show>
+               <Name>Supergirl</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>6/10</IMDBRating>
+               <Plot>Years ago, Krypton was about to explode and Kal-El was sent to Earth to escape that fate. However, his older cousin, Kara, was also intended to accompany the infant as his protector. Unfortunately, Kara was accidentally diverted into the timeless Phantom Zone for years before finally arriving on Earth decades later and found by her cousin who had grown into Superman. Years later, Kara Danvers is a young professional adrift in a thankless job until a fateful crisis ignites a sense of purpose using Kryptonian powers she had long hidden. Inspired, Kara decides to emulate her cousin's superheroic ways, only to find her foster sister introducing her to the secret Department of Extra-Normal Operations, dedicated to fighting alien menaces including those Kara inadvertently led to Earth. Now with such help, the Maid of Might takes her place as Earth's newest champion with new friends and enemies challenging her world.                Written byKenneth Chisholm (kchishol@rogers.com)</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/83/209955.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1076817</ChannelId>
+            <ChannelName>ABC</ChannelName>
+            <Logo>ABC</Logo>
+            <Show>
+               <Name>The Bachelor</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>A single bachelor dates multiple women over several weeks, narrowing them down to hopefully find his true love.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/40/101686.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080216</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>The O'Reilly Factor</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Fox News Channel news and talk show.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80183.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080749</ChannelId>
+            <ChannelName>NBC</ChannelName>
+            <Logo>NBC</Logo>
+            <Show>
+               <Name>The Voice</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>9/10</IMDBRating>
+               <Plot>Four famous musicians search for the best voices in America and will mentor these singers to become artists. America will decide which singer will be worthy of the grand prize.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/242126.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081044</ChannelId>
+            <ChannelName>Bloomberg TV</ChannelName>
+            <Logo>Bloomberg TV</Logo>
+            <Show>
+               <Name>Bloomberg Markets: Asia</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/84/210268.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082148</ChannelId>
+            <ChannelName>Discovery Channel</ChannelName>
+            <Logo>Discovery Channel</Logo>
+            <Show>
+               <Name>Fast N' Loud: Revved Up</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/36/91817.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083058</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>The Last Alaskans: No Man's Land</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/227094.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083265</ChannelId>
+            <ChannelName>Telemundo</ChannelName>
+            <Logo>Telemundo</Logo>
+            <Show>
+               <Name>La Fan</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>La Fan tells the story of a comic, cheerful and humble woman who is a fan of a famous tv actor and by a twist of fate, she will come unexpectedly into his life and, although at first he did not pay much attention, at the end he can not imagine living life without her.                Written byJose Rafael</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/93/233401.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083298</ChannelId>
+            <ChannelName>Univision</ChannelName>
+            <Logo>Univision</Logo>
+            <Show>
+               <Name>Pequenos Gigantes USA</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/242141.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083309</ChannelId>
+            <ChannelName>A&amp;E</ChannelName>
+            <Logo>A&amp;E</Logo>
+            <Show>
+               <Name>The First 48: Killer Confessions</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/16/40915.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083310</ChannelId>
+            <ChannelName>CNN</ChannelName>
+            <Logo>CNN</Logo>
+            <Show>
+               <Name>Anderson Cooper 360°</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80204.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083333</ChannelId>
+            <ChannelName>Headline News</ChannelName>
+            <Logo>Headline News</Logo>
+            <Show>
+               <Name>Primetime Justice with Ashleigh Banfield</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/80/201281.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083346</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>All In with Chris Hayes</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81912.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083403</ChannelId>
+            <ChannelName>TLC</ChannelName>
+            <Logo>TLC</Logo>
+            <Show>
+               <Name>My Big Fat Fabulous Life</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/17/42825.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1088688</ChannelId>
+            <ChannelName>TBN</ChannelName>
+            <Logo>TBN</Logo>
+            <Show>
+               <Name>Praise</Name>
+               <StartTime>2017-03-06T20:00:00</StartTime>
+               <EndTime>2017-03-06T21:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/241124.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1038732</ChannelId>
+            <ChannelName>Investigation Discovery</ChannelName>
+            <Logo>Investigation Discovery</Logo>
+            <Show>
+               <Name>Vanity Fair Confidential</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/9/23788.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1039340</ChannelId>
+            <ChannelName>FOX</ChannelName>
+            <Logo>FOX</Logo>
+            <Show>
+               <Name>APB</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>6/10</IMDBRating>
+               <Plot>After witnessing a violent crime, a tech billionaire purchases a troubled police precinct, rebooting it as a private police force.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/94/237459.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1055620</ChannelId>
+            <ChannelName>Food Network</ChannelName>
+            <Logo>Food Network</Logo>
+            <Show>
+               <Name>Cake Wars</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Bakers compete to have their cakes showcased at a major party or special event.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/99/249943.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1060756</ChannelId>
+            <ChannelName>Outdoor Channel</ChannelName>
+            <Logo>Outdoor Channel</Logo>
+            <Show>
+               <Name>Backcountry Rescue</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T21:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/241387.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1073258</ChannelId>
+            <ChannelName>Bravo</ChannelName>
+            <Logo>Bravo</Logo>
+            <Show>
+               <Name>Vanderpump Rules</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/31/79139.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1073369</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>Tucker Carlson Tonight</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/84/212459.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1076850</ChannelId>
+            <ChannelName>VH1</ChannelName>
+            <Logo>VH1</Logo>
+            <Show>
+               <Name>The Breaks</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>The Breaks series picks up where the VH1 original movie leaves off. It is 1990 in New York City at the height of rap's "Golden Age" of creativity, but corporate America has been hesitant to embrace the genre. Nikki lands a dream job as the assistant to the legendary and out-of-control Barry Fouray. Her best friend and producer DeeVee is working with rapper Ahm who is currently under investigation by the police for murder. How far will these driven young people go to rise to the top of the hip-hop world?</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/99/248198.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1078246</ChannelId>
+            <ChannelName>ABC</ChannelName>
+            <Logo>ABC</Logo>
+            <Show>
+               <Name>The Bachelor</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>A single bachelor dates multiple women over several weeks, narrowing them down to hopefully find his true love.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/40/101686.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1078465</ChannelId>
+            <ChannelName>A&amp;E</ChannelName>
+            <Logo>A&amp;E</Logo>
+            <Show>
+               <Name>Cold Case Files</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/99/248300.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1078951</ChannelId>
+            <ChannelName>Discovery Channel</ChannelName>
+            <Logo>Discovery Channel</Logo>
+            <Show>
+               <Name>Fast N' Loud</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>8/10</IMDBRating>
+               <Plot>These guys cruise for the classics. Meet self-described petrol-sexual motorhead Richard Rawlings and mechanical prodigy Aaron Kaufmann as they search far-flung corners of the country for forgotten and derelict classic cars to restore at their Gas Monkey Garage. Heaps of rust are transformed into gleaming road warriors and sold to the top bidder.                Written byDiscovery</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/6/15006.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1078954</ChannelId>
+            <ChannelName>HGTV</ChannelName>
+            <Logo>HGTV</Logo>
+            <Show>
+               <Name>Love It or List It</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>4/10</IMDBRating>
+               <Plot>Whether it's a newlywed couple or a big family, these homeowners will rely on real estate experts Hillary Farr, who will renovate their current home, and David Visentin, who will find them a new home, to make or find them a dream home and ask them to chose whether they will "love" or "list" their newly renovated current home.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/21/53367.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079878</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>Superior Donuts</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T21:30:00</EndTime>
+               <IMDBRating>3/10</IMDBRating>
+               <Plot>Workers at a local doughnut shop keep their business going in a changing neighborhood.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/98/245531.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080952</ChannelId>
+            <ChannelName>National Geographic Channel</ChannelName>
+            <Logo>National Geographic Channel</Logo>
+            <Show>
+               <Name>Origins</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://vignette2.wikia.nocookie.net/assassinscreed/images/3/39/Not-found.jpg/revision/latest?cb=20110517171552</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082213</ChannelId>
+            <ChannelName>CBS Sports Network</ChannelName>
+            <Logo>CBS Sports Network</Logo>
+            <Show>
+               <Name>Inside College Basketball</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T21:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83411.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083059</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>The Last Alaskans: No Man's Land</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/227094.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083275</ChannelId>
+            <ChannelName>Telemundo</ChannelName>
+            <Logo>Telemundo</Logo>
+            <Show>
+               <Name>La Dona</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>La Doña" based on Doña Bárbara, the literary works of Rómulo Gallegos, is a story of revenge and ambition, seduction and betrayal; told from the perspective of an offended and abused woman named Altagracia. Altagracia represents the hundreds of thousands of Mexican women who have been victims of violence faceless men, protected by impunity. But Altagracia, transformed into a ruthless woman devouring men, strong-willed and known as "La Doña", look to each and every one of these men to bring them to justice.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/85/213175.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083329</ChannelId>
+            <ChannelName>History</ChannelName>
+            <Logo>History</Logo>
+            <Show>
+               <Name>American Pickers: Bonus Buys</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/84/210267.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083356</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>The Rachel Maddow Show</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Air America's liberal talk show host discusses current events, with an emphasis on politics.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80181.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083396</ChannelId>
+            <ChannelName>MTV</ChannelName>
+            <Logo>MTV</Logo>
+            <Show>
+               <Name>Teen Mom 2</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>6/10</IMDBRating>
+               <Plot>A spin-off of the MTV documentary series '16 and Pregnant'. The show follows the stories of four girls from the second season of '16 and Pregnant' and documents the challenges of their first years of motherhood. Each episode interweaves stories of four teenage girls who are navigating the bumpy terrain of adolescence, growing pains, and coming of age - all while facing the responsibility of being a young mother. Each story offers a unique look into the wide variety of challenges young mothers can face: marriage, relationships, family support, or lack thereof, adoption, finances, rumors among the community, graduating high school, starting college, getting (or losing) a job and the daunting and exciting step of moving out of the nest to create their own families.                Written byAnonymous</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/17/43892.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090604</ChannelId>
+            <ChannelName>Golf Channel</ChannelName>
+            <Logo>Golf Channel</Logo>
+            <Show>
+               <Name>Feherty</Name>
+               <StartTime>2017-03-06T21:00:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>David Feherty hosts a golf-themed show, which includes in-depth discussions of his guests personal lives.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/21/54149.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082214</ChannelId>
+            <ChannelName>CBS Sports Network</ChannelName>
+            <Logo>CBS Sports Network</Logo>
+            <Show>
+               <Name>Inside College Basketball</Name>
+               <StartTime>2017-03-06T21:30:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/83411.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083401</ChannelId>
+            <ChannelName>Outdoor Channel</ChannelName>
+            <Logo>Outdoor Channel</Logo>
+            <Show>
+               <Name>Wardens</Name>
+               <StartTime>2017-03-06T21:30:00</StartTime>
+               <EndTime>2017-03-06T22:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/36/91628.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1029559</ChannelId>
+            <ChannelName>National Geographic Channel</ChannelName>
+            <Logo>National Geographic Channel</Logo>
+            <Show>
+               <Name>Explorer</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>A weekly series of short documentary segments funded by the National Geographic Society and done in the style of the National Geographic Specials. In 2003, the show was re-branded National Geographic Ultimate Explorer. A news-style journal format is now used instead of the more traditional format of the specials.                Written byJason A. Cormier &amp;lt;wildrose@mindspring.com&amp;gt; and Douglas Burnette &amp;lt;littlerubberfeet@yahoo.com&amp;gt;</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/21/52742.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1048211</ChannelId>
+            <ChannelName>A&amp;E</ChannelName>
+            <Logo>A&amp;E</Logo>
+            <Show>
+               <Name>Bates Motel</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>"Bates Motel" is a contemporary prequel to the genre-defining film "Psycho," and gives a portrayal of how Norman Bates' (Freddie Highmore) psyche unravels through his teenage years. Fans discover the dark, twisted backstory of Norman Bates and how deeply intricate his relationship with his mother, Norma (Vera Farmiga), truly is.                Written byA&amp;amp;E Television Networks</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/1/2855.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1050096</ChannelId>
+            <ChannelName>Discovery Channel</ChannelName>
+            <Logo>Discovery Channel</Logo>
+            <Show>
+               <Name>Diesel Brothers</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>6/10</IMDBRating>
+               <Plot>A group of friends in Utah own and operate a business that specializes in all things diesel. These guys don't just sell parts for diesel trucks and jeeps, they also design and build some of the biggest, baddest, and most amazing diesel powered vehicles you will ever see. Watch as they create these awesome masterpieces of American craftsmanship and enjoy all the antics they get into while doing it.                Written byRyan Templin</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/37/93994.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1053769</ChannelId>
+            <ChannelName>World</ChannelName>
+            <Logo>World</Logo>
+            <Show>
+               <Name>PBS NewsHour</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/35/89134.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1063349</ChannelId>
+            <ChannelName>VH1</ChannelName>
+            <Logo>VH1</Logo>
+            <Show>
+               <Name>Martha &amp; Snoop's Potluck Dinner Party</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T22:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/82/206122.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1071622</ChannelId>
+            <ChannelName>NBC</ChannelName>
+            <Logo>NBC</Logo>
+            <Show>
+               <Name>Taken</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/100/250528.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1073259</ChannelId>
+            <ChannelName>Bravo</ChannelName>
+            <Logo>Bravo</Logo>
+            <Show>
+               <Name>Summer House</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/225867.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1074196</ChannelId>
+            <ChannelName>BYU Television</ChannelName>
+            <Logo>BYU Television</Logo>
+            <Show>
+               <Name>Studio C</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T22:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/26/65164.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1075314</ChannelId>
+            <ChannelName>Oprah Winfrey Network</ChannelName>
+            <Logo>Oprah Winfrey Network</Logo>
+            <Show>
+               <Name>Dateline on OWN</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/48/121721.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1076851</ChannelId>
+            <ChannelName>truTV</ChannelName>
+            <Logo>truTV</Logo>
+            <Show>
+               <Name>Chris Webber's Full Court Pranks</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T22:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/98/247382.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079151</ChannelId>
+            <ChannelName>Travel Channel</ChannelName>
+            <Logo>Travel Channel</Logo>
+            <Show>
+               <Name>Booze Traveler</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/12/31664.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080211</ChannelId>
+            <ChannelName>FOX News Channel</ChannelName>
+            <Logo>FOX News Channel</Logo>
+            <Show>
+               <Name>Hannity</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80855.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081257</ChannelId>
+            <ChannelName>CNBC</ChannelName>
+            <Logo>CNBC</Logo>
+            <Show>
+               <Name>American Greed</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Documentary focusing on history's largest financial crimes.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/24/62062.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083060</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>The Last Alaskans: No Man's Land</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/227094.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083285</ChannelId>
+            <ChannelName>Telemundo</ChannelName>
+            <Logo>Telemundo</Logo>
+            <Show>
+               <Name>El Chema</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Inspired by true events, This is the story of the most notorious drug kingpin the world had ever seen. A man known as El Chapo, the biggest international drug lord in history. The most important and influential man, in the history of Narcos. He changed the game with his spectacular escapes and innovative smuggling techniques.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/86/215482.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083315</ChannelId>
+            <ChannelName>CNN</ChannelName>
+            <Logo>CNN</Logo>
+            <Show>
+               <Name>CNN Tonight with Don Lemon</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81715.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083325</ChannelId>
+            <ChannelName>HGTV</ChannelName>
+            <Logo>HGTV</Logo>
+            <Show>
+               <Name>House Hunters</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T22:30:00</EndTime>
+               <IMDBRating>9/10</IMDBRating>
+               <Plot>Hosted by Suzanne Whang, the show takes viewers behind the scenes as individuals, couples and families learn what to look for and decide whether or not a home is meant for them. Focusing on the emotional experience of finding and purchasing a new home, each episode follows a prospective buyer and real estate agent through the home-buying process, from start to finish.                Written byAnonymous</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/21/54158.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083341</ChannelId>
+            <ChannelName>Investigation Discovery</ChannelName>
+            <Logo>Investigation Discovery</Logo>
+            <Show>
+               <Name>Obsession: Dark Desires</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>8/10</IMDBRating>
+               <Plot>Obsessions form in all different kinds of ways. It could be a date, an interview, or even just a passing on the street. In this bone-chilling series they will show real life stories of obsession told by the victims.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/7/18653.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083376</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>The Last Word with Lawrence O'Donnell</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81921.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083397</ChannelId>
+            <ChannelName>MTV</ChannelName>
+            <Logo>MTV</Logo>
+            <Show>
+               <Name>Teen Mom 2</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>6/10</IMDBRating>
+               <Plot>A spin-off of the MTV documentary series '16 and Pregnant'. The show follows the stories of four girls from the second season of '16 and Pregnant' and documents the challenges of their first years of motherhood. Each episode interweaves stories of four teenage girls who are navigating the bumpy terrain of adolescence, growing pains, and coming of age - all while facing the responsibility of being a young mother. Each story offers a unique look into the wide variety of challenges young mothers can face: marriage, relationships, family support, or lack thereof, adoption, finances, rumors among the community, graduating high school, starting college, getting (or losing) a job and the daunting and exciting step of moving out of the nest to create their own families.                Written byAnonymous</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/17/43892.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084890</ChannelId>
+            <ChannelName>DIY Network</ChannelName>
+            <Logo>DIY Network</Logo>
+            <Show>
+               <Name>Maine Cabin Masters</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/226826.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090734</ChannelId>
+            <ChannelName>Z Living</ChannelName>
+            <Logo>Z Living</Logo>
+            <Show>
+               <Name>Flip My Food with Chef Jeff</Name>
+               <StartTime>2017-03-06T22:00:00</StartTime>
+               <EndTime>2017-03-06T22:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/88/220672.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083331</ChannelId>
+            <ChannelName>History</ChannelName>
+            <Logo>History</Logo>
+            <Show>
+               <Name>Pawn Stars: Pumped Up</Name>
+               <StartTime>2017-03-06T22:03:00</StartTime>
+               <EndTime>2017-03-06T22:33:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/83/207970.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083398</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>NHL Overtime</Name>
+               <StartTime>2017-03-06T22:15:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/34/87060.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080720</ChannelId>
+            <ChannelName>HGTV</ChannelName>
+            <Logo>HGTV</Logo>
+            <Show>
+               <Name>House Hunters International</Name>
+               <StartTime>2017-03-06T22:30:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>8/10</IMDBRating>
+               <Plot>Home hunters and their realtors check out all sorts of architectural styles and work through the idiosyncrasies of buying real estate in other countries.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/51/129980.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090735</ChannelId>
+            <ChannelName>Z Living</ChannelName>
+            <Logo>Z Living</Logo>
+            <Show>
+               <Name>Flip My Food with Chef Jeff</Name>
+               <StartTime>2017-03-06T22:30:00</StartTime>
+               <EndTime>2017-03-06T23:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/88/220672.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1052355</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Entertainment Tonight</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80929.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1057590</ChannelId>
+            <ChannelName>Fox Sports 1</ChannelName>
+            <Logo>Fox Sports 1</Logo>
+            <Show>
+               <Name>FOX Sports Live with Jay and Dan</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/96/240630.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1065895</ChannelId>
+            <ChannelName>TBS</ChannelName>
+            <Logo>TBS</Logo>
+            <Show>
+               <Name>Conan</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Conan O'Brien and his co-host Andy Richter discuss current news topics and interview celebrities and personalities.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/1/4583.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1073262</ChannelId>
+            <ChannelName>Bravo</ChannelName>
+            <Logo>Bravo</Logo>
+            <Show>
+               <Name>Watch What Happens Live</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>10/10</IMDBRating>
+               <Plot>Bravo network executive Andy Cohen discusses pop culture topics with celebrities and reality show personalities.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/54/135584.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079093</ChannelId>
+            <ChannelName>Viceland</ChannelName>
+            <Logo>Viceland</Logo>
+            <Show>
+               <Name>Desus &amp; Mero</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/94/237155.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082281</ChannelId>
+            <ChannelName>Bloomberg TV</ChannelName>
+            <Logo>Bloomberg TV</Logo>
+            <Show>
+               <Name>Bloomberg Markets: Middle East</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/57/143319.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083061</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>The Last Alaskans: No Man's Land</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/90/227094.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083107</ChannelId>
+            <ChannelName>E!</ChannelName>
+            <Logo>E!</Logo>
+            <Show>
+               <Name>E! News</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/84016.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083428</ChannelId>
+            <ChannelName>Univision</ChannelName>
+            <Logo>Univision</Logo>
+            <Show>
+               <Name>Primer Impacto Extra</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/84078.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083480</ChannelId>
+            <ChannelName>Comedy Central</ChannelName>
+            <Logo>Comedy Central</Logo>
+            <Show>
+               <Name>The Daily Show with Trevor Noah</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/19/48965.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083492</ChannelId>
+            <ChannelName>MSNBC</ChannelName>
+            <Logo>MSNBC</Logo>
+            <Show>
+               <Name>The 11th Hour with Brian Williams</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/73/184400.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083503</ChannelId>
+            <ChannelName>World</ChannelName>
+            <Logo>World</Logo>
+            <Show>
+               <Name>Nightly Business Report</Name>
+               <StartTime>2017-03-06T23:00:00</StartTime>
+               <EndTime>2017-03-06T23:30:00</EndTime>
+               <IMDBRating>3/10</IMDBRating>
+               <Plot>A nightly summary of business and investment news.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/35/87737.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083481</ChannelId>
+            <ChannelName>Comedy Central</ChannelName>
+            <Logo>Comedy Central</Logo>
+            <Show>
+               <Name>@midnight</Name>
+               <StartTime>2017-03-06T23:30:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Hosted by legendary talk show host, Chris Hardwick, this 30 minute segment provides information about the Internet while being scrutinized by amazing comedians. This show consists of clips, gifs, pictures, and etc. that thrive within the dark shadows of what is known as the Internet.                Written byAndrew Scott</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/64/162003.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084458</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>The Insider</Name>
+               <StartTime>2017-03-06T23:30:00</StartTime>
+               <EndTime>2017-03-06T1.00:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/80946.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1089755</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>The Late Show with Stephen Colbert</Name>
+               <StartTime>2017-03-06T23:35:00</StartTime>
+               <EndTime>2017-03-06T1.00:35:00</EndTime>
+               <IMDBRating>4/10</IMDBRating>
+               <Plot>Stephen Colbert took over as host, executive producer and writer of THE LATE SHOW on Tuesday, Sept. 8, 2015. The comedy-variety-talk show is broadcast five nights a week from the Ed Sullivan theater in New York.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/18/47217.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1090475</ChannelId>
+            <ChannelName>ABC</ChannelName>
+            <Logo>ABC</Logo>
+            <Show>
+               <Name>Jimmy Kimmel Live</Name>
+               <StartTime>2017-03-06T23:35:00</StartTime>
+               <EndTime>2017-03-06T1.00:35:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Jimmy Kimmel interviews celebrities.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/7/19553.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079074</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>Missouri Mountain Family</Name>
+               <StartTime>2017-03-06T00:00:00</StartTime>
+               <EndTime>2017-03-06T01:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/99/248617.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080372</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Harry</Name>
+               <StartTime>2017-03-06T00:00:00</StartTime>
+               <EndTime>2017-03-06T01:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/73/184700.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083448</ChannelId>
+            <ChannelName>Univision</ChannelName>
+            <Logo>Univision</Logo>
+            <Show>
+               <Name>Contacto Deportivo</Name>
+               <StartTime>2017-03-06T00:00:00</StartTime>
+               <EndTime>2017-03-06T01:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/84053.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083482</ChannelId>
+            <ChannelName>Comedy Central</ChannelName>
+            <Logo>Comedy Central</Logo>
+            <Show>
+               <Name>The High Court</Name>
+               <StartTime>2017-03-06T00:00:00</StartTime>
+               <EndTime>2017-03-06T00:15:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/94/237372.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083500</ChannelId>
+            <ChannelName>NBCSN</ChannelName>
+            <Logo>NBCSN</Logo>
+            <Show>
+               <Name>Premier League Manchester Mondays</Name>
+               <StartTime>2017-03-06T00:00:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/32/81160.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1080939</ChannelId>
+            <ChannelName>CBS</ChannelName>
+            <Logo>CBS</Logo>
+            <Show>
+               <Name>The Late Late Show with James Corden</Name>
+               <StartTime>2017-03-06T00:35:00</StartTime>
+               <EndTime>2017-03-06T01:35:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Each week night, The Late Late Show with James Corden throws the ultimate late-night after-party with a mix of celebrity guests, edgy musical acts, games and sketches. Corden differentiates his show by offering viewers a peek behind the scenes into the green room, bringing all of his guests out at once and lending his musical and acting talents to various sketches. Additionally, bandleader Reggie Watts and the house band provide original, improvised music throughout the show. Since Corden took the reigns as host in March 2015, he has quickly become known for generating buzzworthy viral videos, such as Carpool Karaoke.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/15/38435.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1081119</ChannelId>
+            <ChannelName>NBC</ChannelName>
+            <Logo>NBC</Logo>
+            <Show>
+               <Name>Late Night with Seth Meyers</Name>
+               <StartTime>2017-03-06T00:37:00</StartTime>
+               <EndTime>2017-03-06T01:38:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Seth Meyers hosts a late-night talk show.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/2/5469.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083408</ChannelId>
+            <ChannelName>ABC</ChannelName>
+            <Logo>ABC</Logo>
+            <Show>
+               <Name>Nightline</Name>
+               <StartTime>2017-03-06T00:37:00</StartTime>
+               <EndTime>2017-03-06T01:07:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/27/69482.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1044528</ChannelId>
+            <ChannelName>REELZ</ChannelName>
+            <Logo>REELZ</Logo>
+            <Show>
+               <Name>Celebrity Page</Name>
+               <StartTime>2017-03-06T01:00:00</StartTime>
+               <EndTime>2017-03-06T01:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/52/132423.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1079075</ChannelId>
+            <ChannelName>Animal Planet</ChannelName>
+            <Logo>Animal Planet</Logo>
+            <Show>
+               <Name>Missouri Mountain Family</Name>
+               <StartTime>2017-03-06T01:00:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/99/248617.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083470</ChannelId>
+            <ChannelName>Bloomberg TV</ChannelName>
+            <Logo>Bloomberg TV</Logo>
+            <Show>
+               <Name>Bloomberg Daybreak: Europe</Name>
+               <StartTime>2017-03-06T01:00:00</StartTime>
+               <EndTime>2017-03-06T02:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/82/205762.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084479</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>Extra</Name>
+               <StartTime>2017-03-06T01:00:00</StartTime>
+               <EndTime>2017-03-06T01:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Extra, a television news updates show on current events in the mass-entertainment business such as movies, TV, music, etc.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/6/17334.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1092324</ChannelId>
+            <ChannelName>TNT</ChannelName>
+            <Logo>TNT</Logo>
+            <Show>
+               <Name>Players Only Postgame</Name>
+               <StartTime>2017-03-06T01:00:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/101/252592.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083479</ChannelId>
+            <ChannelName>CBS Sports Network</ChannelName>
+            <Logo>CBS Sports Network</Logo>
+            <Show>
+               <Name>Poker Night in America</Name>
+               <StartTime>2017-03-06T01:30:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/48/122399.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1083487</ChannelId>
+            <ChannelName>ESPNEWS</ChannelName>
+            <Logo>ESPNEWS</Logo>
+            <Show>
+               <Name>SportsNation</Name>
+               <StartTime>2017-03-06T01:30:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>7/10</IMDBRating>
+               <Plot>SportsNation is a daily sports-related program based on one of ESPN's web pages. Topics discussed are suggested by fans through the website's forums, polls, emails and tweets. Viewers interact with the show's hosts by e-mail, text, Twitter or phone calls. Regular topics include Polls, The B.S. Meter, Date Marry or Dump, Fake Calls from Real Fans, Game Time, Lock 'Em Up, Pulse of the Nation, Power Rankings, Three Cheers/Jeers/Tears, and What We Learned. For the Weird Web Stories segments, fans can contribute sports or non-sports related videos and the hosts polled regarding what will happen next. The final segment of each show quickly discusses sports events of the day.                Written byDavid Bassler</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/27/68950.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084503</ChannelId>
+            <ChannelName>Syndication</ChannelName>
+            <Logo>Syndication</Logo>
+            <Show>
+               <Name>TMZ on TV</Name>
+               <StartTime>2017-03-06T01:30:00</StartTime>
+               <EndTime>2017-03-06T02:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Follow the hosts of this million dollar television show as they report on the newest Hollywood gossip, movie titles and more</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/95/239275.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084450</ChannelId>
+            <ChannelName>ESPN2</ChannelName>
+            <Logo>ESPN2</Logo>
+            <Show>
+               <Name>Jalen &amp; Jacoby</Name>
+               <StartTime>2017-03-06T02:00:00</StartTime>
+               <EndTime>2017-03-06T02:30:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/42/105423.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084559</ChannelId>
+            <ChannelName>BET</ChannelName>
+            <Logo>BET</Logo>
+            <Show>
+               <Name>The Wendy Williams Show</Name>
+               <StartTime>2017-03-06T02:00:00</StartTime>
+               <EndTime>2017-03-06T03:00:00</EndTime>
+               <IMDBRating>1/10</IMDBRating>
+               <Plot>Talk show where Wendy Williams chats about celebrity gossip and what's new in the entertainment world.</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/23/58086.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1084574</ChannelId>
+            <ChannelName>BET</ChannelName>
+            <Logo>BET</Logo>
+            <Show>
+               <Name>The Real</Name>
+               <StartTime>2017-03-06T03:00:00</StartTime>
+               <EndTime>2017-03-06T04:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/23/58094.jpg</Logo>
+            </Show>
+         </Channel>
+         <Channel>
+            <ChannelId>1082231</ChannelId>
+            <ChannelName>ESPNU</ChannelName>
+            <Logo>ESPNU</Logo>
+            <Show>
+               <Name>College Basketball Live</Name>
+               <StartTime>2017-03-06T03:30:00</StartTime>
+               <EndTime>2017-03-06T04:00:00</EndTime>
+               <IMDBRating>Geen beoordeling gevonden</IMDBRating>
+               <Plot>Geen plot gevonden</Plot>
+               <Logo>http://static.tvmaze.com/uploads/images/medium_portrait/33/82547.jpg</Logo>
+            </Show>
+         </Channel>
+      </ns0:Guide>
+   </s:Body>
+</s:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetGuide"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

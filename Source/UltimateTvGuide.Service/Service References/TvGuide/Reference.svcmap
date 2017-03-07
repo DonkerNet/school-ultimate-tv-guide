@@ -19,12 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:4321/ultimateTvGuideService/TvGuide.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TvGuide.xsd" MetadataType="Schema" ID="2cb2d894-8eee-4def-abba-0a4c8a790249" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide_1.xsd" />
-    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="0a2a3d61-e63f-49ce-9a90-226f1cde8162" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?wsdl" />
-    <MetadataFile FileName="TvGuide1.xsd" MetadataType="Schema" ID="987ac08e-021b-42fc-a77e-d66e19afe063" SourceId="1" SourceUrl="http://localhost:1234/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide.xsd" />
+    <MetadataFile FileName="BizTalkServiceInstance1.wsdl" MetadataType="Wsdl" ID="51333fae-0642-4209-9d66-77ed66a37274" SourceId="1" SourceUrl="http://localhost:4321/ultimateTvGuideService/TvGuide.svc?wsdl" />
+    <MetadataFile FileName="TvGuide2.xsd" MetadataType="Schema" ID="d7e6dc74-d928-4276-ba68-8dd98bd81491" SourceId="1" SourceUrl="http://localhost:4321/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide.xsd" />
+    <MetadataFile FileName="TvGuide21.xsd" MetadataType="Schema" ID="e4477e40-1de5-495d-a076-cc367169552d" SourceId="1" SourceUrl="http://localhost:4321/ultimateTvGuideService/TvGuide.svc?WSDL&amp;interface=BasicHttpBinding_ITwoWayAsync&amp;part=TvGuide_1.xsd" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

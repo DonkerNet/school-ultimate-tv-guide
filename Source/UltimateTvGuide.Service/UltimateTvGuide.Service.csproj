@@ -54,11 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\TvGuide\BizTalkServiceInstance.wsdl" />
-    <None Include="Service References\TvGuide\TvGuide.xsd">
+    <None Include="Service References\TvGuide\BizTalkServiceInstance1.wsdl" />
+    <None Include="Service References\TvGuide\TvGuide2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TvGuide\TvGuide1.xsd">
+    <None Include="Service References\TvGuide\TvGuide21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\TvGuide\UltimateTvGuide.Service.TvGuide.GetGuideResponse.datasource">
