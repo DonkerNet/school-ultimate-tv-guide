@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using UltimateTvGuide.Service.TvGuide;
 
@@ -36,10 +37,40 @@ namespace UltimateTvGuide.Domain.Entities
                     .ForMember(d => d.LogoUri, m => m.ResolveUsing(s => TryParseUri(s.Logo)))
                     .ForMember(d => d.Shows, m => m.ResolveUsing(s => s.Show));
 
-                c.CreateMap<Guide, TvGuide>()
-                    .ForMember(d => d.LoadDate, m => m.ResolveUsing(s => TryParseDateTimeOffset(s.LoadDate)))
-                    .ForMember(d => d.Channels, m => m.ResolveUsing(s => s.Channel));
+                c.CreateMap<Guide, TvGuide>().ConvertUsing(MapTvGuide);
             });
+        }
+
+        private static TvGuide MapTvGuide(Guide source, TvGuide destination, ResolutionContext context)
+        {
+            // Group channels with the same ID into a single group
+
+            Dictionary<int, TvChannel> tvChannelDict = new Dictionary<int, TvChannel>();
+
+            foreach (GuideChannel channel in source.Channel)
+            {
+                TvChannel newTvChannel = context.Mapper.Map<TvChannel>(channel);
+
+                TvChannel existingTvChannel;
+                if (tvChannelDict.TryGetValue(newTvChannel.Id, out existingTvChannel))
+                {
+                    foreach (TvShow tvShow in newTvChannel.Shows)
+                        existingTvChannel.Shows.Add(tvShow);
+                }
+                else
+                {
+                    tvChannelDict.Add(newTvChannel.Id, newTvChannel);
+                }
+            }
+
+            destination = new TvGuide
+            {
+                LoadDate = TryParseDateTimeOffset(source.LoadDate),
+                Country = source.Country,
+                Channels = tvChannelDict.Values.OrderBy(c => c.Name).ToList()
+            };
+
+            return destination;
         }
 
         #region Helper methods

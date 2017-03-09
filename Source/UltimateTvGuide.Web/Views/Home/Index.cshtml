@@ -17,7 +17,6 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
             <div class="col-md-4 col-sm-6 padleft-right">
                 <figure class="imghvr-fold-up">
                     <img src="~/img/tv-flag-nl.jpg" class="img-responsive">
@@ -35,10 +34,19 @@
                         <h3>Engeland</h3>
                         <p>Klik hier om de Engelse televisie gids te bekijken.</p>
                     </figcaption>
-                    <a href="@Url.Action("Index", "Guide", new {country = "en"})"></a>
+                    <a href="@Url.Action("Index", "Guide", new {country = "uk"})"></a>
                 </figure>
             </div>
-            <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+            <div class="col-md-4 col-sm-6 padleft-right">
+                <figure class="imghvr-fold-up">
+                    <img src="~/img/tv-flag-us.jpg" class="img-responsive">
+                    <figcaption>
+                        <h3>Verenigde Staten</h3>
+                        <p>Klik hier om de televisie gids voor de Verenigde Staten te bekijken.</p>
+                    </figcaption>
+                    <a href="@Url.Action("Index", "Guide", new {country = "us"})"></a>
+                </figure>
+            </div>
         </div>
     </div>
 </section>

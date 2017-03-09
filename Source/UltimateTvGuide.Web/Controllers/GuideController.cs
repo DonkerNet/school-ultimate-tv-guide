@@ -25,19 +25,6 @@ namespace UltimateTvGuide.Web.Controllers
         {
             TvGuide tvGuide = _tvGuideRepository.GetByCountry(country);
             GuideIndexViewModel model = _modelMapper.Map<GuideIndexViewModel>(tvGuide);
-
-            if (model.HasChannels)
-            {
-                // Remove channels without shows
-                model.Channels.RemoveAll(c => !c.HasShows);
-
-                // Sort channels by ID
-                model.Channels.Sort((f, s) => f.Id.CompareTo(s.Id));
-
-                // Sort shows by start time
-                model.Channels.ForEach(c => c.Shows.Sort((f, s) => f.StartTime.CompareTo(s.StartTime)));
-            }
-
             return View(model);
         }
     }
