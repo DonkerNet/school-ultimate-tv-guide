@@ -137,6 +137,7 @@
     <Content Include="img\bg-banner.jpg" />
     <Content Include="img\tv-flag-gb.jpg" />
     <Content Include="img\tv-flag-nl.jpg" />
+    <Content Include="img\tv-flag-us.jpg" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.min.js" />
