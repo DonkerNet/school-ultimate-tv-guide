@@ -154,7 +154,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Guide\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CodeStructuurUitleg.docx" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
